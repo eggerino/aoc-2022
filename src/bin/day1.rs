@@ -1,10 +1,7 @@
-use std::{env, fs};
+use aoc_2022::get_file_content;
 
 fn main() {
-    let filename = env::args()
-        .nth(1)
-        .expect("Provide a file to read the input from");
-    let content = fs::read_to_string(filename).expect("Cannot read the given file");
+    let content = get_file_content();
 
     let mut calories = content
         .split("\n\n")
